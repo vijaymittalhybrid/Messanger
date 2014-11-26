@@ -1,0 +1,29 @@
+<div data-role="view" id="number_register" data-model="app.startpageService.viewModel" data-show="app.startpageService.viewModel.show">
+    <div data-role="header">
+        <div data-role="navbar" class="navbar">
+            <a data-role="backbutton" data-align="left" class="btn"><img src="project/style/image/logo_mike.png"/></a>
+            <span>Phone Number</span>
+            <a data-role="button" data-align="right" class="button" data-bind="click:phonenumber" data-icon="right"></a>
+        </div>
+    </div>
+    <div data-role="content">
+        <div class="contentDiv">
+            <p>Hi! What's your Number?</p>
+            
+            <div class="control">
+                <div class="dvFld">
+                  <input name="mob_number" class="combo"  id="mob_number"/>  
+                </div>
+                
+                <div class="dvFld">
+                   <input type="number" name="mob_number" class="inputcontrol" maxlength="10"/>      
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/x-kendo-template" id="combo_template">
+    <span class="setbox">#:code#</span>
+    <span class="setbox">#:name#</span>
+</script>

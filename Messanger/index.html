@@ -6,7 +6,6 @@
     <link href="kendo/styles/kendo.common.min.css" rel="stylesheet" />
     <link href="kendo/styles/kendo.default.min.css" rel="stylesheet" />
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet"/>
-    <link href="kendo/styles/kendo.bootstrap.min.css" rel="stylesheet"/>
     <link href="project/style/design.css" rel="stylesheet"/>
     <link href="project/style/component.css" rel="stylesheet"/>
    
@@ -15,10 +14,10 @@
     
 </head>
 <body>
-    <div data-role="view" id="startpage" data-model="app.startpageService.viewModel" data-show="app.startpageService.viewModel.show">
+    <div data-role="view" id="startpage">
         <div data-role="header">
             <div data-role="navbar" class="navbar">
-                <a data-role="button" data-align="right" class="button" data-bind="click:termsAndCondition">Terms</a>
+                <a data-role="button" data-align="right" class="button" href="views/terms.html">Terms</a>
             </div>
         </div>
  
@@ -35,8 +34,7 @@
                <img src="project/style/image/logo.png"/>
            </div>
            <div class="getstrt">
-               <!--<a data-role="button" data-bind="click:getStarted">Get Started</a>-->
-                <button class="progress-button" style="width:100%;height:50px;margin:0px auto" data-style="flip-open" data-perspective data-horizontal>Get Started</button>
+               <a data-role="button" href="views/number_register.html">Get Started</a>
                <p>
                    Made with <img src="project/style/image/love.png" style="height:10px; width:10px;line-height:10px;"/> in India
                </p>
@@ -57,26 +55,5 @@
      <script src="project/script/lib/modernizr.custom.js"></script>
     <script src="project/script/lib/classie.js"></script>
     <script src="project/script/lib/progressButton.js"></script>
-    <script>
-		[].slice.call( document.querySelectorAll( 'button.progress-button' ) ).forEach( function( bttn ) {
-			new ProgressButton( bttn, {
-				callback : function( instance ) {
-					var progress = 0,
-						interval = setInterval( function() {
-							progress = Math.min( progress + Math.random() * 0.1, 1 );
-							instance._setProgress( progress );
-
-							if( progress === 1 ) {
-								instance._stop(1);
-								clearInterval( interval );
-								//alert("hello");
-                                app.startpageService.viewModel.getStarted();
-                                progress=0;
-							}
-						}, 200 );
-				}
-			} );
-		} );
-	</script>
 </body>
 </html>

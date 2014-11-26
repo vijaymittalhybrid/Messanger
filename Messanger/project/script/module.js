@@ -1,1 +1,0 @@
-var my = angular.module("myStartPage", []);
